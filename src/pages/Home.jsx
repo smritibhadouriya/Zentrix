@@ -1,0 +1,223 @@
+import React from 'react';
+import Banner from '../partials/components/Banner';
+import { FaChartBar, FaCheckCircle, FaEnvelope, FaMobileAlt, FaShieldAlt, FaUser, FaVideo } from 'react-icons/fa';
+const Home = () => {
+const services = [
+  {
+    id: 1,
+    name: 'Display Ads',
+    description: 'Wide variety of high-ranking publishers depending on the target audience through standard/rich media for high visibility.',
+    icon: FaChartBar,
+  },
+  {
+    id: 2,
+    name: 'Influencer Marketing',
+    description: 'Find the leading Influencer Marketing Agency to manage your Influencer juggernauts across the board.',
+    icon: FaUser,
+  },
+  {
+    id: 3,
+    name: 'Mobile Marketing',
+    description: 'Reach a target audience on their smartphones, tablets, and other mobile devices.',
+    icon: FaMobileAlt,
+  },
+  {
+    id: 4,
+    name: 'Email Marketing',
+    description: 'Complete solution for successful email performance by segmenting and profiling email subscribers derived from historical response rates.',
+    icon: FaEnvelope,
+  },
+  {
+    id: 5,
+    name: 'Video Ads',
+    description: 'Optimize your online video campaign, promoting your brand by connecting with the audience through short and instructional videos.',
+    icon: FaVideo,
+  },
+  {
+    id: 6,
+    name: 'ORM Solutions',
+    description: 'Comprehensive solution for online reputation management to maintain and enhance your brand\'s digital presence.',
+    icon: FaShieldAlt,
+  },
+];
+ const testimonials = [
+    {
+      quote: "DigitalPro transformed our online presence completely. Our ROI increased by 300% within the first quarter!",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1JvWhC.img?w=1400&h=700&m=4&q=79",
+    },
+    {
+      quote: "Their influencer marketing strategy helped us reach millions of potential customers. Absolutely phenomenal results!",
+      name: "Michael Chen",
+      company: "E-commerce Plus",
+      image: "https://tse2.mm.bing.net/th/id/OIP.PCVcH9De5ghgXuGa2pORHAHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      quote: "The team's expertise in mobile marketing doubled our app downloads in just two months. Highly recommended!",
+      name: "Emily Rodriguez",
+      company: "Fashion Forward",
+      image: "https://tse4.mm.bing.net/th/id/OIP.EPu4rPPSxdZKGv-jrEHPewHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      quote: "Outstanding service! Our brand visibility skyrocketed thanks to their SEO expertise. Highly recommended!",
+      name: "David Lee",
+      company: "Innovate Tech",
+      image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/203ba178-a255-472c-b858-7a949d9cbd50/dc5akgn-c7d5d9f2-6e95-4180-9183-4d33a735073c.jpg/v1/fill/w_900,h_1297,q_75,strp/luna_lovegood1_by_maria_hideki_dc5akgn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI5NyIsInBhdGgiOiJcL2ZcLzIwM2JhMTc4LWEyNTUtNDcyYy1iODU4LTdhOTQ5ZDljYmQ1MFwvZGM1YWtnbi1jN2Q1ZDlmMi02ZTk1LTQxODAtOTE4My00ZDMzYTczNTA3M2MuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.gd157Kq8EEgKt-u_6GripJDJ7Q00qn3MyhWI1mFWeYI",
+    },
+   
+  ];
+// Define an array of gradient styles
+const gradients = [
+  'linear-gradient(135deg, #f97316, #f59e0b)', // Orange to Amber
+  'linear-gradient(135deg, #6b21a8, #9d4edd)', // Purple to Dark Pink
+  'linear-gradient(135deg, #2563eb, #3b82f6)', // Blue to Light Blue
+  'linear-gradient(135deg, #16a34a, #22c55e)', // Yellowish Green to Green
+  'linear-gradient(135deg, #dc2626, #f87171)', // Red to Light Red (similar to orange to yellow)
+  'linear-gradient(135deg, #4c51bf, #6b46c1)', // Blue to Purple
+];
+
+
+  return (
+    <div>
+    <Banner />
+    {/*Our Digital Services */}
+<div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
+  <div className="max-w-lg mx-auto text-center">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
+    <p className="text-gray-600 mt-2 text-sm sm:text-base">
+      Comprehensive digital marketing solutions designed to accelerate your business growth and maximize your online presence.
+    </p>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto mt-4 sm:mt-6">
+    {services.map((service, index) => (
+      <div
+        key={service.id}
+        className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between text-left transition-all hover:shadow-xl sm:hover:translate-y-[-10px] sm:hover:scale-105"
+      >
+        <div>
+          <div 
+            className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2"
+            style={{ background: gradients[index % gradients.length], flexShrink: 0 }}
+          >
+            <service.icon className="text-xl sm:text-2xl text-white" />
+          </div>
+          <h3 className="text-lg sm:text-xl font-bold">{service.name}</h3>
+          <p className="mt-2 text-gray-600 text-sm sm:text-base">{service.description}</p>
+        </div>
+        <a href="#" className="mt-3 sm:mt-4 inline-block text-orange-500 self-start text-sm sm:text-base">
+          Learn More &gt;
+        </a>
+      </div>
+    ))}
+  </div>
+  <div className="flex justify-center mt-6 sm:mt-8">
+    <button className="px-6 py-2 sm:px-8 sm:py-3 bg-orange-500 text-white rounded-full flex items-center hover:bg-orange-600 text-sm sm:text-base">
+      View All Services <span className="ml-2">&rarr;</span>
+    </button>
+  </div>
+</div>
+{/*Why choose us*/}
+ <div className="flex flex-col md:flex-row items-center justify-center px-4 py-10 md:px-6 md:py-12 lg:px-36 lg:py-16 bg-white">
+          <div className="w-full md:w-1/2 p-6">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Zentrix?</h1>
+            <p className="text-gray-600 mb-6 text-xl">
+              We combine cutting-edge technology with proven strategies to deliver exceptional results for your business.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 mr-2"><FaCheckCircle className='text-green-500' /></span>
+                <span className="text-gray-600 "><span className='font-semibold'>Data-Driven Approach</span><br />Every campaign is backed by comprehensive analytics and real-time performance tracking.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 mr-2"><FaCheckCircle className='text-green-500' /></span>
+                <span className="text-gray-600"><span className='font-semibold'>Expert Team</span><br />Our certified professionals have years of experience across all digital marketing channels.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 mr-2"><FaCheckCircle className='text-green-500' /></span>
+                <span className="text-gray-600"><span className='font-semibold'>Proven Results</span><br />Track record of delivering measurable ROI improvements for businesses of all sizes.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 mr-2"><FaCheckCircle className='text-green-500' /></span>
+                <span className="text-gray-600"><span className='font-semibold'>24/7 Support</span><br />Round-the-clock support to ensure your campaigns run smoothly at all times.</span>
+              </li>
+            </ul>
+          </div>
+      <div className="w-full md:w-1/2 p-6">
+  <div className="relative">
+    <img
+      src="https://tse2.mm.bing.net/th/id/OIP.shNTxms8RDdb1Po60Ywa-QHaEs?rs=1&pid=ImgDetMain&o=7&rm=3"
+      alt="Handshake"
+      className="rounded-lg shadow-lg"
+    />
+    <div className="absolute bottom-[-15px] left-[-15px]  bg-white px-4 py-2 rounded-lg shadow-md z-10">
+      <div className="text-2xl font-bold text-orange-500">500+</div>
+      <div>Successful Projects</div>
+    </div>
+  </div>
+</div>
+
+</div>
+{/*Testimonials */}
+  <div className=" px-4 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center text-gray-900">What Our Clients Say</h2>
+        <p className="mt-2 text-lg text-center text-gray-600 mb-10">Don't just take our word for it - hear from our satisfied clients</p>
+      <div className="overflow-x-auto hide-scrollbar">
+  <div className="flex gap-6" style={{ minWidth: '1000px' }}>
+    {testimonials.map((testimonial, index) => (
+      <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-1/3">
+        <div className="flex justify-left">
+          <span className="inline-flex items-left rounded-full text-xl font-bold text-yellow-500 ">
+            ★★★★★
+          </span>
+        </div>
+        <div className="mt-4 text-left">
+          <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+        </div>
+        <div className="mt-6 flex items-left justify-left">
+          <img className="h-12 w-12 rounded-full object-cover" src={testimonial.image} alt={testimonial.name} />
+          <div className="ml-4">
+            <p className="text-sm font-medium text-gray-900">{testimonial.name}</p>
+            <p className="text-sm text-gray-500">{testimonial.company}</p>
+          </div>
+
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+      </div>
+    </div>
+{/*States */}
+   <div className="flex flex-col md:flex-row justify-around items-center bg-orange-500 text-white py-4 md:py-15 px-6 ">
+          <div className="text-center mb-4 md:mb-0">
+            <h3 className="text-4xl font-bold">500+</h3>
+            <p className="text-sm">Successful Campaigns</p>
+          </div>
+          <div className="text-center mb-4 md:mb-0">
+            <h3 className="text-4xl font-bold">98%</h3>
+            <p className="text-sm">Client Satisfaction</p>
+          </div>
+          <div className="text-center mb-4 md:mb-0">
+            <h3 className="text-4xl font-bold">250M+</h3>
+            <p className="text-sm">Impressions Generated</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-4xl font-bold">24/7</h3>
+            <p className="text-sm">Support Available</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:justify-center md:items-center md:p-8  gap-6 bg-gray-900  text-gray-300  py-4 md:py-15 px-6">
+  <h1 className="text-4xl font-bold mt-4">Ready to Transform Your Digital Presence?</h1>
+  <div className="text-lg">Join hundreds of successful businesses that trust us with their digital marketing needs.</div>
+  <button className="bg-orange-500 hover:bg-orange-600 px-5 py-4 rounded-full">
+    Get Started Today <span className="ml-2">&rarr;</span>
+  </button>
+</div>
+    </div>
+  );
+};
+
+export default Home;
