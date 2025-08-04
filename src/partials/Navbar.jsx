@@ -163,7 +163,7 @@ const Navbar = () => {
       {/* Overlay for Mobile and Medium Menu */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden z-40"
+          className="fixed inset-0  bg-opacity-50 lg:hidden z-40"
           onClick={toggleMenu}
         ></div>
       )}

@@ -51,14 +51,15 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-           <div className="mt-15 text-center text-xs text-gray-500 border-t pt-6 flex justify-between items-center ">
-  <div className="text-left text-lg">© 2025 Zentrix. All rights reserved.</div>
-  <div className="text-right">
-    <a href="#" className="hover:text-orange-500 ml-4 text-lg">Terms of Service</a> 
-    <a href="#" className="hover:text-orange-500 ml-4 text-lg">Privacy Policy</a> 
-    <a href="#" className="hover:text-orange-500 ml-4 text-lg">Cookie Policy</a>
+     <div className="mt-15 text-center text-xs text-gray-500 border-t pt-6 md:flex justify-between items-center">
+  <div className="md:text-left text-lg md:order-1">© 2025 Zentrix. All rights reserved.</div>
+  <div className="md:text-right md:order-2 md:flex space-x-4">
+    <a href="#" className="hover:text-orange-500 text-lg">Terms of Service</a>
+    <a href="#" className="hover:text-orange-500 text-lg">Privacy Policy</a>
+    <a href="#" className="hover:text-orange-500 text-lg">Cookie Policy</a>
   </div>
 </div>
+
 
           </div>
         </footer>
