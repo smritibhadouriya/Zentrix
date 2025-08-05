@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaMailBulk, FaMailchimp, FaTwitter } from 'react-icons/fa'
+import { FaLetterboxd, FaLocationDot, FaPhone, FaSquareLetterboxd } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
@@ -44,11 +45,21 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-white text-lg font-semibold mb-2">Contact Info</h3>
-                <ul className="text-sm space-y-2">
-                  <li><span className="text-orange-500">📍</span> 123 Business Avenue, New York, NY 10001</li>
-                  <li><span className="text-orange-500">📞</span> +1 (555) 123-4567</li>
-                  <li><span className="text-orange-500">📧</span> hello@Zentrix.com</li>
-                </ul>
+              <ul className="text-sm space-y-2">
+  <li className="flex items-center">
+    <span className="text-orange-500 mr-2"><FaLocationDot /></span>
+    123 Business Avenue, New York, NY 10001
+  </li>
+  <li className="flex items-center">
+    <span className="text-orange-500 mr-2"><FaPhone /></span>
+    +1 (555) 123-4567
+  </li>
+  <li className="flex items-center">
+    <span className="text-orange-500 mr-2"><FaMailBulk /></span>
+    hello@Zentrix.com
+  </li>
+</ul>
+
               </div>
             </div>
      <div className="mt-15 text-center text-xs text-gray-500 border-t pt-6 md:flex justify-between items-center">

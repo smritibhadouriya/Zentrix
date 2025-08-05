@@ -33,8 +33,8 @@ const Banner = () => {
           <span className="text-gray-600 text-sm sm:text-base">(4.9/5 Rating)</span>
         </div>
       </div>
-      <div className="md:w-1/2 mt-6 md:mt-0 relative">
-        <div className="absolute top-0 left-3 md:top-17 md:left-5 lg:top-0 lg:left-5 bg-gradient-to-l  from-orange-700 to-orange-400 z-0 w-full h-full md:h-105 md:w-95 lg:h-full lg:w-full transform rotate-[5deg] origin-top rounded-2xl"></div>
+      <div className="md:w-1/2 mt-6 md:mt-0 relative lg:p-10">
+        <div className="absolute top-0 left-3 md:top-17 md:left-5 lg:top-8 lg:left-15 bg-gradient-to-l   from-orange-700 to-orange-400 z-0 w-full h-full md:h-105 md:w-95 lg:h-125 lg:w-134 transform rotate-[5deg] origin-top rounded-2xl"></div>
         <div className="bg-white rounded-2xl shadow-xl p-4 md:p-6 md:mt-20 lg:mt-0 relative z-10">
           <img
             src="https://tse3.mm.bing.net/th/id/OIP.NwHlFkr2nHn64-Zm9ASXKQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"

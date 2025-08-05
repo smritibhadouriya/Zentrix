@@ -23,7 +23,7 @@ const Contact = () => {
   return (
    <div className="  flex flex-col items-center ">
           {/* Header */}
-          <header className="text-center py-25 bg-opacity-10 bg-orange-50 w-full">
+          <header className="text-center py-20 mt-20 md:mt-20 lg:mt-0 px-4 md:px-0 bg-opacity-10 bg-orange-50 w-full">
             <h1 className="text-5xl font-bold text-gray-800">Let's <span className='text-orange-500'>Grow Together</span></h1>
            <p className="text-gray-600 mt-2 text-md whitespace-pre-wrap  mx-auto text-md">
               Ready to transform your digital presence? Get in touch with our team of experts and{"\n"} let's discuss how we can help accelerate your business growth.

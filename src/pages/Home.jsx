@@ -82,7 +82,7 @@ const gradients = [
     <div>
     <Banner />
     {/*Our Digital Services */}
-<div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
+<div className="px-2 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
   <div className="max-w-lg mx-auto text-center">
     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
     <p className="text-gray-600 mt-2 text-sm sm:text-base">
@@ -118,7 +118,7 @@ const gradients = [
   </div>
 </div>
 {/*Why choose us*/}
- <div className="flex flex-col md:flex-row items-center justify-center px-4 py-10 md:px-6 md:py-12 lg:px-36 lg:py-16 bg-white">
+ <div className="flex flex-col md:flex-row items-center justify-center px-1 py-10 md:px-6 md:py-12 lg:px-36 lg:py-16 bg-white">
           <div className="w-full md:w-1/2 p-6">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Zentrix?</h1>
             <p className="text-gray-600 mb-6 text-xl">
@@ -143,14 +143,14 @@ const gradients = [
               </li>
             </ul>
           </div>
-      <div className="w-full md:w-1/2 p-6">
+      <div className="w-full md:w-1/2 p-2 md:p-6">
   <div className="relative">
     <img
       src="https://tse2.mm.bing.net/th/id/OIP.shNTxms8RDdb1Po60Ywa-QHaEs?rs=1&pid=ImgDetMain&o=7&rm=3"
       alt="Handshake"
       className="rounded-lg shadow-lg"
     />
-    <div className="absolute bottom-[-15px] left-[-15px]  bg-white px-4 py-2 rounded-lg shadow-md z-10">
+    <div className="absolute bottom-[-15px] left-[-1px] md:left-[-15px]  bg-white px-4 py-2 rounded-lg shadow-md z-10">
       <div className="text-2xl font-bold text-orange-500">500+</div>
       <div>Successful Projects</div>
     </div>
@@ -159,7 +159,7 @@ const gradients = [
 
 </div>
 {/*Testimonials */}
-  <div className=" px-4 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
+  <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900">What Our Clients Say</h2>
         <p className="mt-2 text-lg text-center text-gray-600 mb-10">Don't just take our word for it - hear from our satisfied clients</p>
@@ -209,7 +209,7 @@ const gradients = [
           </div>
         </div>
 
-        <div className="flex flex-col md:justify-center md:items-center md:p-8  gap-6 bg-gray-900  text-gray-300  py-4 md:py-15 px-6">
+        <div className="flex flex-col md:justify-center md:items-center md:p-8  gap-6 bg-gray-900  text-gray-300  py-4 md:py-15 px-5 md:px-6">
   <h1 className="text-4xl font-bold mt-4">Ready to Transform Your Digital Presence?</h1>
   <div className="text-lg">Join hundreds of successful businesses that trust us with their digital marketing needs.</div>
   <button className="bg-orange-500 hover:bg-orange-600 px-5 py-4 rounded-full">
