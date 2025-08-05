@@ -33,35 +33,35 @@ const Banner = () => {
           <span className="text-gray-600 text-sm sm:text-base">(4.9/5 Rating)</span>
         </div>
       </div>
-      <div className="md:w-1/2 mt-6 md:mt-0 relative lg:p-10">
-        <div className="absolute top-0 left-3 md:top-17 md:left-5 lg:top-8 lg:left-15 bg-gradient-to-l   from-orange-700 to-orange-400 z-0 w-full h-full md:h-105 md:w-95 lg:h-125 lg:w-134 transform rotate-[5deg] origin-top rounded-2xl"></div>
-        <div className="bg-white rounded-2xl shadow-xl p-4 md:p-6 md:mt-20 lg:mt-0 relative z-10">
-          <img
-            src="https://tse3.mm.bing.net/th/id/OIP.NwHlFkr2nHn64-Zm9ASXKQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Chart showing campaign performance metrics"
-            className="rounded-2xl mb-4 w-full"
-          />
-          <div className='flex items-center'>
-            <h3 className="text-sm sm:text-md">Campaign Performance</h3>
-            <span className="text-green-600 font-bold ml-auto text-sm sm:text-base">+247%</span>
-          </div>
-          <div className="flex items-center justify-between mt-2">
-            <div className="w-full bg-gray-300 rounded-full h-2 mx-2">
-              <div className="bg-orange-500 h-2 rounded-full" style={{ width: '98%' }}></div>
-            </div>
-          </div>
-          <div className="flex justify-between mt-4">
-            <div className="text-gray-700 flex flex-col items-center">
-              <span className="text-base sm:text-lg font-semibold">98%</span>
-              <span className="font-medium text-sm sm:text-base">Success Rate</span>
-            </div>
-            <div className="text-gray-700 flex flex-col items-center">
-              <span className="text-base sm:text-lg font-semibold">24/7</span>  
-              <span className="font-medium text-sm sm:text-base">Support</span>
-            </div>
-          </div>
-        </div>
+      <div className="w-full md:w-1/2 mt-6 md:mt-0 relative p-4 sm:p-6 md:pt-20 lg:pt-0 lg:p-8 xl:p-10">
+  <div className="absolute top-3 left-7 sm:left-3 md:top-20 md:left-10 lg:top-8 lg:left-14 bg-gradient-to-l from-orange-700 to-orange-400 z-0 w-[calc(100%-2rem)] sm:w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] lg:w-[calc(100%-4.5rem)] h-[calc(100%-1.5rem)] sm:h-[calc(100%-1.5rem)] md:h-[calc(100%-8rem)] lg:h-[calc(100%-4.5rem)] transform rotate-[3deg] sm:rotate-[4deg] md:rotate-[5deg] origin-top rounded-2xl"></div>
+  <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-5 md:p-6 relative z-10">
+    <img
+      src="https://tse3.mm.bing.net/th/id/OIP.NwHlFkr2nHn64-Zm9ASXKQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+      alt="Chart showing campaign performance metrics"
+      className="rounded-2xl mb-4 w-full h-auto object-cover"
+    />
+    <div className="flex items-center justify-between flex-wrap gap-2">
+      <h3 className="text-sm sm:text-base md:text-lg font-semibold">Campaign Performance</h3>
+      <span className="text-green-600 font-bold text-sm sm:text-base md:text-lg">+247%</span>
+    </div>
+    <div className="flex items-center justify-between mt-2">
+      <div className="w-full bg-gray-300 rounded-full h-2 sm:h-2.5 mx-2">
+        <div className="bg-orange-500 h-2 sm:h-2.5 rounded-full" style={{ width: '98%' }}></div>
       </div>
+    </div>
+    <div className="flex justify-between mt-4 gap-2">
+      <div className="text-gray-700 flex flex-col items-center">
+        <span className="text-base sm:text-lg md:text-xl font-semibold">98%</span>
+        <span className="font-medium text-xs sm:text-sm md:text-base">Success Rate</span>
+      </div>
+      <div className="text-gray-700 flex flex-col items-center">
+        <span className="text-base sm:text-lg md:text-xl font-semibold">24/7</span>
+        <span className="font-medium text-xs sm:text-sm md:text-base">Support</span>
+      </div>
+    </div>
+  </div>
+</div>
       
     </div>
   )
