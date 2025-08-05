@@ -34,12 +34,12 @@ const Banner = () => {
         </div>
       </div>
       <div className="w-full md:w-1/2 mt-6 md:mt-0 relative p-4 sm:p-6 md:pt-20 lg:pt-0 lg:p-8 xl:p-10">
-  <div className="absolute top-3 left-7 sm:left-3 md:top-20 md:left-10 lg:top-10 lg:left-14 bg-gradient-to-l from-orange-700 to-orange-400 z-0 w-[calc(100%-2rem)] sm:w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] lg:w-[calc(100%-4.5rem)] h-[calc(100%-1.5rem)] sm:h-[calc(100%-1.5rem)] md:h-[calc(100%-8rem)] lg:h-[calc(100%-5rem)] transform rotate-[3deg] sm:rotate-[4deg] md:rotate-[5deg] origin-top rounded-2xl"></div>
+  <div className="absolute top-3 left-7 sm:left-3 md:top-20 md:left-10 lg:top-11 lg:left-14 bg-gradient-to-l from-orange-700 to-orange-400 z-0 w-[calc(100%-2rem)] sm:w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] lg:w-[calc(100%-4.5rem)] xl:w-[calc(100%-4.5rem)] h-[calc(100%-1.5rem)] sm:h-[calc(100%-1.5rem)] md:h-[calc(100%-8rem)] lg:h-[calc(100%-6rem)]    transform rotate-[3deg] sm:rotate-[4deg] md:rotate-[5deg] origin-top rounded-2xl"></div>
   <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-5 md:p-6 relative z-10">
     <img
       src="https://tse3.mm.bing.net/th/id/OIP.NwHlFkr2nHn64-Zm9ASXKQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
       alt="Chart showing campaign performance metrics"
-      className="rounded-2xl mb-4 w-full h-auto object-cover"
+      className="rounded-2xl mb-4 w-full h-auto object-cover"  
     />
     <div className="flex items-center justify-between flex-wrap gap-2">
       <h3 className="text-sm sm:text-base md:text-lg font-semibold">Campaign Performance</h3>
