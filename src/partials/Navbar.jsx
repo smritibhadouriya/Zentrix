@@ -73,9 +73,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   return (
-    <nav className={`bg-white fixed w-full  md:px-6 lg:px-36 z-50 ${isScrolled ? 'shadow-xl' : ''}`}>
-      <div className="max-w-7xl mx-auto px-6 py-2">
-        <div className="flex justify-between items-center h-16">
+    <nav className={`bg-white fixed w-full md:px-6 lg:px-36 z-50 ${isScrolled ? 'shadow-xl' : ''}`}>
+      <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 py-2 ">
+        <div className="flex justify-between items-center h-16 ">
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex justify-center items-center">
