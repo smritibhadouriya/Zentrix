@@ -23,8 +23,8 @@ const Contact = () => {
   return (
    <div className="  flex flex-col items-center ">
           {/* Header */}
-          <header className="text-center py-20 mt-20 md:mt-20 lg:mt-0 px-4 md:px-0 bg-opacity-10 bg-orange-50 w-full">
-            <h1 className="text-5xl font-bold text-gray-800">Let's <span className='text-orange-500'>Grow Together</span></h1>
+          <header className="text-center py-20 mt-20 md:mt-20 lg:mt-0 px-4 md:px-0 bg-opacity-10 bg-blue-50 w-full">
+            <h1 className="text-5xl font-bold text-gray-800">Let's <span className='text-blue-500'>Grow Together</span></h1>
            <p className="text-gray-600 mt-2 text-md whitespace-pre-wrap  mx-auto text-md">
               Ready to transform your digital presence? Get in touch with our team of experts and{"\n"} let's discuss how we can help accelerate your business growth.
             </p>
@@ -38,7 +38,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-6">We're here to help you succeed. Whether you have questions about our services, need a custom quote, or want to discuss your marketing goals, our team is ready to assist.</p>
               <div className="space-y-5">
                 <div className="flex items-center">
-                  <span className="bg-orange-500 text-white rounded-full p-2 mr-2">
+                  <span className="bg-blue-500 text-white rounded-full p-2 mr-2">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M3 14h18"></path>
@@ -51,7 +51,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <span className="bg-orange-500 text-white rounded-full p-2 mr-2">
+                  <span className="bg-blue-500 text-white rounded-full p-2 mr-2">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <span className="bg-orange-500 text-white rounded-full p-2 mr-2">
+                  <span className="bg-blue-500 text-white rounded-full p-2 mr-2">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -76,7 +76,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <span className="bg-orange-500 text-white rounded-full p-2 mr-2">
+                  <span className="bg-blue-500 text-white rounded-full p-2 mr-2">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
@@ -99,7 +99,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700">Full Name *</label>
                   <input 
   type="text" 
-  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2" 
+  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2" 
   placeholder="Your full name" 
 />
                   </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700">Email Address *</label>
                     <input 
   type="text" 
-  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2"  placeholder="your@email.com" />
+  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2"  placeholder="your@email.com" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -115,19 +115,19 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700">Company Name</label>
                     <input 
   type="text" 
-  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2"  placeholder="Your company name" />
+  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2"  placeholder="Your company name" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Phone Number</label>
                    <input 
   type="text" 
-  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2"  placeholder="(555) 123-4567" />
+  className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2"  placeholder="(555) 123-4567" />
                   </div>
                 </div>
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Service Interest</label>
-                    <select className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2">
+                    <select className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2">
                       <option>Select a service</option>
                       <option>Display Advertising</option>
                       <option>Influencer Marketing</option>
@@ -143,7 +143,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Monthly Budget</label>
-                   <select className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2">
+                   <select className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2">
                       <option>Select budget range</option>
                       <option>Under $5,000/month</option>
                       <option>$5,000 - $10,000/month</option>
@@ -155,11 +155,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Message *</label>
-                  <textarea className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-orange-500 focus:outline-2" rows="4" placeholder="Tell us about your project, goals, and how we can help..."></textarea>
+                  <textarea className="mt-1 block w-full border-gray-300 rounded-md  outline-2 outline-gray-300 p-3 focus:outline-blue-500 focus:outline-2" rows="4" placeholder="Tell us about your project, goals, and how we can help..."></textarea>
                 </div>
              <button 
   type="submit" 
-  className="w-full bg-orange-500 text-white py-4 rounded-md  outline-2 outline-gray-300 focus:outline-orange-500 focus:outline-2 flex items-center justify-center"
+  className="w-full bg-blue-500 text-white py-4 rounded-md  outline-2 outline-gray-300 focus:outline-blue-500 focus:outline-2 flex items-center justify-center"
 >
   <FaPaperPlane className="mr-2" /> Send Message
 </button>

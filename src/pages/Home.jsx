@@ -1,45 +1,55 @@
 import React from 'react';
 import Banner from '../partials/components/Banner';
-import { FaChartBar, FaCheckCircle, FaEnvelope, FaMobileAlt, FaShieldAlt, FaUser, FaVideo } from 'react-icons/fa';
+import { FaBullhorn, FaChartBar, FaChartLine, FaCheckCircle, FaEnvelope, FaMobileAlt, FaNewspaper, FaPaintBrush, FaPaperPlane, FaShieldAlt, FaUser, FaUsers, FaVideo } from 'react-icons/fa';
+import { FaMegaport } from 'react-icons/fa6';
+import { Link, useNavigate } from 'react-router-dom';
 const Home = () => {
+  const navigate=useNavigate();
 const services = [
   {
     id: 1,
-    name: 'Display Ads',
-    description: 'Wide variety of high-ranking publishers depending on the target audience through standard/rich media for high visibility.',
-    icon: FaChartBar,
+    name: 'Brand & Strategy',
+    path:'brand-strategy',
+    description: 'Crafting tailored strategies to boost your brand\'s visibility through high-impact, targeted marketing across both standard and rich media formats, ensuring maximum exposure to the right audience.',
+    icon: FaBullhorn,  // Icon representing strategy and marketing
   },
   {
     id: 2,
-    name: 'Influencer Marketing',
-    description: 'Find the leading Influencer Marketing Agency to manage your Influencer juggernauts across the board.',
-    icon: FaUser,
+    name: 'Creative',
+    path: 'Creative',
+    description: 'Collaborating with top-tier creative professionals to deliver innovative campaigns that drive engagement and connect with your audience in meaningful ways, blending creativity with strategic thinking.',
+    icon: FaPaintBrush,  // Icon representing creativity and design
   },
   {
     id: 3,
-    name: 'Mobile Marketing',
-    description: 'Reach a target audience on their smartphones, tablets, and other mobile devices.',
-    icon: FaMobileAlt,
+    name: 'Social',
+    path:'Social',
+    description: 'Building a robust social media presence to connect with audiences on their smartphones, tablets, and mobile devices, leveraging platforms to enhance brand visibility and engagement.',
+    icon: FaUsers,  // Icon representing social media and community
   },
   {
     id: 4,
-    name: 'Email Marketing',
-    description: 'Complete solution for successful email performance by segmenting and profiling email subscribers derived from historical response rates.',
-    icon: FaEnvelope,
+    name: 'PR',
+    path:'PR',
+    description: 'Tailored public relations strategies to build and maintain a strong brand reputation, using segmentation and profiling techniques to enhance email campaign performance and maximize reach.',
+    icon: FaNewspaper,  // Icon representing PR and communications
   },
   {
     id: 5,
-    name: 'Video Ads',
-    description: 'Optimize your online video campaign, promoting your brand by connecting with the audience through short and instructional videos.',
-    icon: FaVideo,
+    name: 'Digital',
+    path:'Digital',
+    description: 'Leveraging the power of online video content to engage and educate your audience, driving brand awareness and customer loyalty through creative and concise digital video campaigns.',
+    icon: FaVideo,  // Icon representing digital video content
   },
   {
     id: 6,
-    name: 'ORM Solutions',
-    description: 'Comprehensive solution for online reputation management to maintain and enhance your brand\'s digital presence.',
-    icon: FaShieldAlt,
+    name: 'Performance Marketing',
+    path:'Performance Marketing',
+    description: 'Implementing data-driven performance marketing strategies that ensure measurable results, helping brands manage online reputations and increase digital presence through targeted campaigns and performance analysis.',
+    icon: FaChartLine,  // Icon representing performance and analytics
   },
 ];
+
  const testimonials = [
     {
       quote: "DigitalPro transformed our online presence completely. Our ROI increased by 300% within the first quarter!",
@@ -69,11 +79,11 @@ const services = [
   ];
 // Define an array of gradient styles
 const gradients = [
-  'linear-gradient(135deg, #f97316, #f59e0b)', // Orange to Amber
+  'linear-gradient(135deg, #f97316, #f59e0b)', // blue to Amber
   'linear-gradient(135deg, #6b21a8, #9d4edd)', // Purple to Dark Pink
   'linear-gradient(135deg, #2563eb, #3b82f6)', // Blue to Light Blue
   'linear-gradient(135deg, #16a34a, #22c55e)', // Yellowish Green to Green
-  'linear-gradient(135deg, #dc2626, #f87171)', // Red to Light Red (similar to orange to yellow)
+  'linear-gradient(135deg, #dc2626, #f87171)', // Red to Light Red (similar to blue to yellow)
   'linear-gradient(135deg, #4c51bf, #6b46c1)', // Blue to Purple
 ];
 
@@ -82,41 +92,40 @@ const gradients = [
     <div>
     <Banner />
     {/*Our Digital Services */}
-<div className="px-2 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
-  <div className="max-w-lg mx-auto text-center">
-    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
-    <p className="text-gray-600 mt-2 text-sm sm:text-base">
-      Comprehensive digital marketing solutions designed to accelerate your business growth and maximize your online presence.
-    </p>
-  </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto mt-4 sm:mt-6">
-    {services.map((service, index) => (
-      <div
-        key={service.id}
-        className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between text-left transition-all hover:shadow-xl sm:hover:translate-y-[-10px] sm:hover:scale-105"
-      >
-        <div>
-          <div 
-            className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2"
-            style={{ background: gradients[index % gradients.length], flexShrink: 0 }}
-          >
-            <service.icon className="text-xl sm:text-2xl text-white" />
-          </div>
-          <h3 className="text-lg sm:text-xl font-bold">{service.name}</h3>
-          <p className="mt-2 text-gray-600 text-sm sm:text-base">{service.description}</p>
-        </div>
-        <a href="#" className="mt-3 sm:mt-4 inline-block text-orange-500 self-start text-sm sm:text-base">
-          Learn More &gt;
-        </a>
+  <div className="px-2 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
+      <div className="max-w-lg mx-auto text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base">
+          Comprehensive digital marketing solutions designed to accelerate your business growth and maximize your online presence.
+        </p>
       </div>
-    ))}
-  </div>
-  <div className="flex justify-center mt-6 sm:mt-8">
-    <button className="px-6 py-2 sm:px-8 sm:py-3 bg-orange-500 text-white rounded-full flex items-center hover:bg-orange-600 text-sm sm:text-base">
-      View All Services <span className="ml-2">&rarr;</span>
-    </button>
-  </div>
-</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto mt-4 sm:mt-6">
+        {services.map((service, index) => (
+          <div
+            key={service.id}
+         onClick={() => navigate(`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`)}  // Use navigate function
+            className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between text-left transition-all hover:shadow-xl hover:cursor-pointer sm:hover:translate-y-[-10px] sm:hover:scale-105"
+          >
+            <div>
+              <div 
+                className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2"
+                style={{ background: gradients[index % gradients.length], flexShrink: 0 }}
+              >
+                <service.icon className="text-xl sm:text-2xl text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold">{service.name}</h3>
+              <p className="mt-2 text-gray-600 text-sm sm:text-base">{service.description}</p>
+            </div>
+            <Link
+              to={`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`} 
+              className="mt-3 sm:mt-4 inline-block text-blue-500 self-start text-sm sm:text-base"
+            >
+              Learn More 
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
 {/*Why choose us*/}
  <div className="flex flex-col md:flex-row items-center justify-center px-1 py-10 md:px-6 md:py-12 lg:px-36 lg:py-16 bg-white">
           <div className="w-full md:w-1/2 p-6">
@@ -151,7 +160,7 @@ const gradients = [
       className="rounded-lg shadow-lg"
     />
     <div className="absolute bottom-[-15px] left-[-1px] md:left-[-15px]  bg-white px-4 py-2 rounded-lg shadow-md z-10">
-      <div className="text-2xl font-bold text-orange-500">500+</div>
+      <div className="text-2xl font-bold text-blue-500">500+</div>
       <div>Successful Projects</div>
     </div>
   </div>
@@ -181,7 +190,6 @@ const gradients = [
             <p className="text-sm font-medium text-gray-900">{testimonial.name}</p>
             <p className="text-sm text-gray-500">{testimonial.company}</p>
           </div>
-
         </div>
       </div>
     ))}
@@ -190,7 +198,7 @@ const gradients = [
       </div>
     </div>
 {/*States */}
-   <div className="flex flex-col md:flex-row justify-around items-center bg-orange-500 text-white py-4 md:py-15 px-6 ">
+   <div className="flex flex-col md:flex-row justify-around items-center bg-blue-500 text-white py-4 md:py-15 px-6 ">
           <div className="text-center mb-4 md:mb-0">
             <h3 className="text-4xl font-bold">500+</h3>
             <p className="text-sm">Successful Campaigns</p>
@@ -212,9 +220,12 @@ const gradients = [
         <div className="flex flex-col md:justify-center md:items-center md:p-8  gap-6 bg-gray-900  text-gray-300  py-4 md:py-15 px-5 md:px-6">
   <h1 className="text-4xl font-bold mt-4">Ready to Transform Your Digital Presence?</h1>
   <div className="text-lg">Join hundreds of successful businesses that trust us with their digital marketing needs.</div>
-  <button className="bg-orange-500 hover:bg-orange-600 px-5 py-4 rounded-full">
+  <a
+                href="/contact"
+                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors"
+              >
     Get Started Today <span className="ml-2">&rarr;</span>
-  </button>
+  </a>
 </div>
     </div>
   );

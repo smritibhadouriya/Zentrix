@@ -54,8 +54,8 @@ const About = () => {
   ];
   return (
     <div> 
- <header className="text-center py-10 lg:p-10 pt-30 md:pt-30 lg:pt-25 px-4 md:px-0 bg-opacity-10 bg-orange-50 w-full">
-  <h1 className="text-5xl font-bold text-gray-800">About<span className='text-orange-500'> Zentrix</span></h1>
+ <header className="text-center py-10 lg:p-10 pt-30 md:pt-30 lg:pt-25 px-4 md:px-0 bg-opacity-10 bg-blue-50 w-full">
+  <h1 className="text-5xl font-bold text-gray-800">About<span className='text-blue-500'> Zentrix</span></h1>
   <p className="text-gray-600 mt-2 text-md whitespace-pre-wrap mx-auto text-md">
     We're a team of passionate digital marketing experts dedicated to helping businesses {"\n"} thrive in the digital landscape through innovative strategies and proven results.
   </p>
@@ -82,7 +82,7 @@ const About = () => {
           className="rounded-lg shadow-lg"
         />
         <div className="absolute bottom-[-15px] md:right-[-15px] bg-white px-4 py-2 rounded-lg shadow-md z-10">
-          <div className="text-2xl font-bold text-orange-500">7+</div>
+          <div className="text-2xl font-bold text-blue-500">7+</div>
           <div className='text-gray-600'>Years of Excellence</div>
         </div>
       </div>
@@ -91,7 +91,7 @@ const About = () => {
 </header>
 
 <div className="md:flex gap-7 max-w-6xl justify-center items-stretch md:mx-auto px-4 py-17 md:px-5 lg:px-0">
-  <div className="bg-gradient-to-l from-orange-600 to-orange-400 rounded-lg text-white p-8 md:w-1/2 lg:h-full">
+  <div className="bg-gradient-to-l from-blue-600 to-blue-400 rounded-lg text-white p-8 md:w-1/2 lg:h-full">
     <h1 className="text-3xl font-semibold">Our Mission</h1>
     <p className="text-lg mt-5">
       To empower businesses of all digital marketing solutions that drive measurable growth, enhance brand visibility, and create meaningful connections with their target audiences.
@@ -122,7 +122,7 @@ const About = () => {
       >
         <div>
           <div 
-            className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2 bg-gradient-to-l from-orange-600 to-orange-400 "
+            className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2 bg-gradient-to-l from-blue-600 to-blue-400 "
            
           >
             <service.icon className="text-xl sm:text-2xl text-white" />
@@ -156,7 +156,7 @@ const About = () => {
                 alt={testimonial.name}
               />
               <p className="text-sm font-medium text-gray-900 mt-2">{testimonial.name}</p>
-              <p className="text-orange-400 text-lg font-bold">{testimonial.designation}</p>
+              <p className="text-blue-400 text-lg font-bold">{testimonial.designation}</p>
               <div className="mt-4">
                 <p className="text-gray-600">{testimonial.exp}</p>
               </div>
@@ -170,7 +170,7 @@ const About = () => {
 
 
 {/*States */}
-<div className=' bg-orange-500 text-white py-7 md:py-15 px-6 '>
+<div className=' bg-blue-500 text-white py-7 md:py-15 px-6 '>
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center">Our Achievements</h2>
         <p className="mt-2 text-lg text-center mb-20">Numbers that speak for themselves</p>
@@ -236,7 +236,7 @@ const About = () => {
         <div className="flex flex-col md:justify-center md:items-center md:p-8  gap-6 bg-gray-900  text-gray-300  py-4 md:py-15 px-6">
   <h1 className="text-4xl font-bold mt-4">Ready to Work With Us?</h1>
   <div className="text-lg">Let's discuss how we can help transform your digital presence and drive real results for your business.</div>
-  <button className="bg-orange-500 hover:bg-orange-600 px-5 py-4 rounded-full">
+  <button className="bg-blue-500 hover:bg-blue-600 px-5 py-4 rounded-full">
     Start Your Journey <span className="ml-2">&rarr;</span>
   </button>
 </div>
