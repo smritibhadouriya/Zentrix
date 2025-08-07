@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaCheckCircle, FaUsers } from 'react-icons/fa';
 import { FaArrowUpLong, FaAward, FaCircle, FaUser } from 'react-icons/fa6';
 
 const About = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
   const corevalues = [
     {
       id: 1,

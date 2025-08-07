@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
      const faqs = [
         {
           question: "How quickly can you start working on my project?",

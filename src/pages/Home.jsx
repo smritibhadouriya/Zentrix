@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../partials/components/Banner';
 import { FaBullhorn, FaChartBar, FaChartLine, FaCheckCircle, FaEnvelope, FaMobileAlt, FaNewspaper, FaPaintBrush, FaPaperPlane, FaShieldAlt, FaUser, FaUsers, FaVideo } from 'react-icons/fa';
 import { FaMegaport } from 'react-icons/fa6';
 import { Link, useNavigate } from 'react-router-dom';
 const Home = () => {
   const navigate=useNavigate();
+    useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 const services = [
   {
     id: 1,

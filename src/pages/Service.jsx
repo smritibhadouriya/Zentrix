@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaBullhorn, FaLightbulb, FaChartLine, FaUsers, FaCheckCircle, FaStar, FaCircle } from 'react-icons/fa';
 
@@ -6,7 +6,8 @@ const serviceData = {
   "brand-strategy": {
     title: "Brand & Strategy",
     intro: "We help businesses define their brand identity and position it strategically for long-term success in a competitive market.",
-    detailedIntro: "Our Brand & Strategy services empower businesses to carve out a distinct identity in crowded markets. By combining in-depth market analysis, consumer insights, and creative vision, we craft strategies that resonate with your audience and drive sustainable growth.",
+    detailedIntro:
+"Our Brand & Strategy services empower businesses to carve out a distinct identity in crowded markets. By combining in-depth market analysis, consumer insights, and creative vision, we craft strategies that resonate with your audience and drive sustainable growth. Our approach ensures long-term brand success by aligning every element of your identity with your business objectives and customer expectations.",
     features: [
       { 
         text: "Brand Identity Development", 
@@ -49,7 +50,8 @@ const serviceData = {
   "creative": {
     title: "Creative Services",
     intro: "Our creative team is dedicated to delivering captivating visuals and experiences that elevate your brand.",
-    detailedIntro: "Our Creative Services are designed to transform your brand’s vision into compelling visuals and experiences. From stunning graphic designs to immersive digital interfaces, we ensure your brand stands out with creativity that captivates and inspires.",
+  detailedIntro:
+"Our Creative Services are designed to transform your brand’s vision into compelling visuals and experiences. From stunning graphic designs to immersive digital interfaces, we ensure your brand stands out with creativity that captivates and inspires. We focus on every touchpoint to create memorable, visually appealing assets that foster emotional connections with your audience.",
     features: [
       { 
         text: "Graphic Design & Illustration", 
@@ -92,7 +94,8 @@ const serviceData = {
   "social": {
     title: "Social Media Marketing",
     intro: "We create and manage social media campaigns that engage your community and grow your brand's presence across all platforms.",
-    detailedIntro: "Our Social Media Marketing services are built to amplify your brand’s voice across platforms. We craft strategies that foster engagement, build communities, and drive measurable results through targeted content and analytics-driven campaigns.",
+   detailedIntro:
+"Our Social Media Marketing services are built to amplify your brand’s voice across platforms. We craft strategies that foster engagement, build communities, and drive measurable results through targeted content and analytics-driven campaigns. With a focus on community growth and sustained engagement, we ensure your brand stays top-of-mind among your target audience.",
     features: [
       { 
         text: "Social Media Content Creation", 
@@ -135,7 +138,8 @@ const serviceData = {
   "pr": {
     title: "Public Relations (PR)",
     intro: "Our PR strategies help businesses maintain a positive public image, build media relationships, and generate brand awareness.",
-    detailedIntro: "Our Public Relations services are designed to elevate your brand’s reputation and visibility. We craft strategic communication plans that build trust, strengthen media relationships, and position your brand as a leader in your industry.",
+   detailedIntro:
+"Our Public Relations services are designed to elevate your brand’s reputation and visibility. We craft strategic communication plans that build trust, strengthen media relationships, and position your brand as a leader in your industry. Through proactive media outreach and timely crisis management, we help you stay in control of your public narrative.",
     features: [
       { 
         text: "Media Relations & Outreach", 
@@ -178,7 +182,8 @@ const serviceData = {
   "digital": {
     title: "Digital Marketing",
     intro: "Our digital marketing services use data-driven strategies to improve your online visibility and drive traffic to your site.",
-    detailedIntro: "Our Digital Marketing services leverage cutting-edge tools and strategies to boost your online presence. From SEO to content marketing, we create campaigns that drive traffic, engagement, and conversions, ensuring your brand thrives in the digital landscape.",
+   detailedIntro:
+"Our Digital Marketing services leverage cutting-edge tools and strategies to boost your online presence. From SEO to content marketing, we create campaigns that drive traffic, engagement, and conversions, ensuring your brand thrives in the digital landscape. By combining creativity with performance analytics, we make sure your digital efforts generate measurable business impact.",
     features: [
       { 
         text: "SEO & SEM", 
@@ -221,7 +226,8 @@ const serviceData = {
   "performance-marketing": {
     title: "Performance Marketing",
     intro: "We optimize your marketing efforts for maximum ROI using performance-based strategies, ensuring every ad dollar works harder for your business.",
-    detailedIntro: "Our Performance Marketing services focus on delivering measurable results. By leveraging data-driven strategies and advanced analytics, we optimize campaigns to maximize ROI and drive tangible business outcomes.",
+   detailedIntro:
+"Our Performance Marketing services focus on delivering measurable results. By leveraging data-driven strategies and advanced analytics, we optimize campaigns to maximize ROI and drive tangible business outcomes. With a sharp focus on performance, we help you scale efficiently while keeping costs under control and ensuring maximum ad impact.",
     features: [
       { 
         text: "PPC Campaigns (Google Ads, Facebook Ads)", 
@@ -273,6 +279,9 @@ const Service = () => {
     process: [],
     benefits: []
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
    const testimonials = [
     {
@@ -305,9 +314,9 @@ const Service = () => {
   return (
     <div >
       {/* Hero Section */}
-      <header className="text-center py-10 lg:p-10 pt-30 md:pt-30 lg:pt-25 px-4 md:px-0 bg-opacity-10 bg-blue-50 w-full  " >
+      <header className="text-center py-10 lg:p-10 pt-30 md:pt-30 lg:pb-15 lg:pt-25 px-4 md:px-0 bg-opacity-10 bg-blue-50 w-full  " >
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
             <span className="text-blue-500">{serviceInfo.title}</span>
           </h1>
           <p className="text-lg text-gray-600">{serviceInfo.intro}</p>
@@ -357,38 +366,15 @@ const Service = () => {
             ))}
           </div>
         </section>
-
-        {/* Process Section */}
-        <section className="px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">Our Process</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            Our proven process is designed to deliver results with transparency and efficiency, guiding your project from vision to victory.
-          </p>
-          <div className="space-y-8">
-            {serviceInfo.process.map((step, index) => (
-              <div
-                key={index}
-                className="flex items-start space-x-4"
-              >
-                <FaCheckCircle className='text-green-500 m-2' />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
-                  <p className="text-base text-gray-600">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-            {/*Testimonials */}
-  <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
+        {/*Testimonials */}
+  <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900">What Our Clients Say</h2>
         <p className="mt-2 text-lg text-center text-gray-600 mb-10">Don't just take our word for it - hear from our satisfied clients</p>
-      <div className="overflow-x-auto hide-scrollbar">
+      <div className="overflow-x-auto hide-scrollbar py-2">
   <div className="flex gap-6" style={{ minWidth: '1000px' }}>
     {testimonials.map((testimonial, index) => (
-      <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-1/3">
+      <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-md text-center flex-shrink-0 w-1/3">
         <div className="flex justify-left">
           <span className="inline-flex items-left rounded-full text-xl font-bold text-yellow-500 ">
             ★★★★★
@@ -410,6 +396,28 @@ const Service = () => {
 </div>
       </div>
     </div>
+        {/* Process Section */}
+<section className="px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 text-center  bg-gray-100">
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold ">  Our Process</h2>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base mb-8">
+    How we deliver exceptional results for your business
+  </p>
+  <div className="flex flex-col md:flex-row justify-around items-center gap-6 lg:mb-10">
+    {serviceInfo.process.map((step, index) => (
+      <div key={index} className="text-center w-full md:w-auto">
+        <div className="flex justify-center mb-2">
+          <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white text-xl font-bold">
+            {index + 1}
+          </span>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">{step.title}</h3>
+        <p className="text-base text-gray-600">{step.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+    
       {/* Call to Action */}
       <div className="flex flex-col md:justify-center md:items-center md:p-8 gap-6 bg-gray-900 text-gray-300 py-4 md:py-15 px-5 md:px-6">
         <h1 className="text-4xl font-bold mt-4">Ready to Get Started?</h1>
