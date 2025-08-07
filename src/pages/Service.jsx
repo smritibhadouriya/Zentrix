@@ -366,15 +366,37 @@ const Service = () => {
             ))}
           </div>
         </section>
+
+            {/* Process Section */}
+<section className="px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 text-center  ">
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold ">  Our Process</h2>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base mb-8">
+    How we deliver exceptional results for your business
+  </p>
+  <div className="flex flex-col md:flex-row justify-around items-center gap-6 lg:mb-10">
+    {serviceInfo.process.map((step, index) => (
+      <div key={index} className="text-center w-full md:w-auto">
+        <div className="flex justify-center mb-2">
+          <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white text-xl font-bold">
+            {index + 1}
+          </span>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">{step.title}</h3>
+        <p className="text-base text-gray-600">{step.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
         {/*Testimonials */}
-  <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20">
+  <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900">What Our Clients Say</h2>
         <p className="mt-2 text-lg text-center text-gray-600 mb-10">Don't just take our word for it - hear from our satisfied clients</p>
       <div className="overflow-x-auto hide-scrollbar py-2">
   <div className="flex gap-6" style={{ minWidth: '1000px' }}>
     {testimonials.map((testimonial, index) => (
-      <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-md text-center flex-shrink-0 w-1/3">
+      <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-1/3">
         <div className="flex justify-left">
           <span className="inline-flex items-left rounded-full text-xl font-bold text-yellow-500 ">
             ★★★★★
@@ -396,26 +418,7 @@ const Service = () => {
 </div>
       </div>
     </div>
-        {/* Process Section */}
-<section className="px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 text-center  bg-gray-100">
-  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold ">  Our Process</h2>
-        <p className="text-gray-600 mt-2 text-sm sm:text-base mb-8">
-    How we deliver exceptional results for your business
-  </p>
-  <div className="flex flex-col md:flex-row justify-around items-center gap-6 lg:mb-10">
-    {serviceInfo.process.map((step, index) => (
-      <div key={index} className="text-center w-full md:w-auto">
-        <div className="flex justify-center mb-2">
-          <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white text-xl font-bold">
-            {index + 1}
-          </span>
-        </div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">{step.title}</h3>
-        <p className="text-base text-gray-600">{step.description}</p>
-      </div>
-    ))}
-  </div>
-</section>
+    
 
     
       {/* Call to Action */}
