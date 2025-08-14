@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { FaCheckCircle} from 'react-icons/fa';
 import ImgHandshake from '../assets/OIP.webp';
-import Meeting from '../assets/Meeting.webp';
 import {AboutData} from '../Data/AboutData'
 import { useNavigate } from 'react-router-dom';
+import Meeting from '../assets/meeting.webp'
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
