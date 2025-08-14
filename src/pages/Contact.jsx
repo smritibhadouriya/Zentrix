@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { FaPaperPlane } from 'react-icons/fa';
-
 const Contact = () => {
     useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page

@@ -5,5 +5,4 @@ const App = () => {
     <Auth />
   )
 }
-
 export default App

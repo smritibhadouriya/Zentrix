@@ -1,85 +1,27 @@
-import React, { useEffect } from 'react';
-import Banner from '../partials/components/Banner';
-import { FaBullhorn, FaChartBar, FaChartLine, FaCheckCircle, FaEnvelope, FaMobileAlt, FaNewspaper, FaPaintBrush, FaPaperPlane, FaShieldAlt, FaUser, FaUsers, FaVideo } from 'react-icons/fa';
-import { FaMegaport } from 'react-icons/fa6';
+import React, { useEffect, useState } from 'react';
+import Banner from '../components/Banner';
+import { FaCheckCircle} from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import { services } from '../Data/Services';
+import { testimonials } from '../Data/Testimonials';
 const Home = () => {
   const navigate=useNavigate();
+    const [showSubscribe, setShowSubscribe] = useState(false);
     useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
-  }, []);
-const services = [
-  {
-    id: 1,
-    name: 'Brand & Strategy',
-    path:'brand-strategy',
-    description: 'Crafting tailored strategies to boost your brand\'s visibility through high-impact, targeted marketing across both standard and rich media formats, ensuring maximum exposure to the right audience.',
-    icon: FaBullhorn,  // Icon representing strategy and marketing
-  },
-  {
-    id: 2,
-    name: 'Creative',
-    path: 'Creative',
-    description: 'Collaborating with top-tier creative professionals to deliver innovative campaigns that drive engagement and connect with your audience in meaningful ways, blending creativity with strategic thinking.',
-    icon: FaPaintBrush,  // Icon representing creativity and design
-  },
-  {
-    id: 3,
-    name: 'Social',
-    path:'Social',
-    description: 'Building a robust social media presence to connect with audiences on their smartphones, tablets, and mobile devices, leveraging platforms to enhance brand visibility and engagement.',
-    icon: FaUsers,  // Icon representing social media and community
-  },
-  {
-    id: 4,
-    name: 'PR',
-    path:'PR',
-    description: 'Tailored public relations strategies to build and maintain a strong brand reputation, using segmentation and profiling techniques to enhance email campaign performance and maximize reach.',
-    icon: FaNewspaper,  // Icon representing PR and communications
-  },
-  {
-    id: 5,
-    name: 'Digital',
-    path:'Digital',
-    description: 'Leveraging the power of online video content to engage and educate your audience, driving brand awareness and customer loyalty through creative and concise digital video campaigns.',
-    icon: FaVideo,  // Icon representing digital video content
-  },
-  {
-    id: 6,
-    name: 'Performance Marketing',
-    path:'Performance Marketing',
-    description: 'Implementing data-driven performance marketing strategies that ensure measurable results, helping brands manage online reputations and increase digital presence through targeted campaigns and performance analysis.',
-    icon: FaChartLine,  // Icon representing performance and analytics
-  },
-];
+     const handleScroll = () => {
+      if (!localStorage.getItem("subscribed-popup-shown")) {
+        setShowSubscribe(true);
+        localStorage.setItem("subscribed-popup-shown", "true");
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
 
- const testimonials = [
-    {
-      quote: "DigitalPro transformed our online presence completely. Our ROI increased by 300% within the first quarter!",
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1JvWhC.img?w=1400&h=700&m=4&q=79",
-    },
-    {
-      quote: "Their influencer marketing strategy helped us reach millions of potential customers. Absolutely phenomenal results!",
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      image: "https://tse2.mm.bing.net/th/id/OIP.PCVcH9De5ghgXuGa2pORHAHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
-    },
-    {
-      quote: "The team's expertise in mobile marketing doubled our app downloads in just two months. Highly recommended!",
-      name: "Emily Rodriguez",
-      company: "Fashion Forward",
-      image: "https://tse4.mm.bing.net/th/id/OIP.EPu4rPPSxdZKGv-jrEHPewHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
-    },
-    {
-      quote: "Outstanding service! Our brand visibility skyrocketed thanks to their SEO expertise. Highly recommended!",
-      name: "David Lee",
-      company: "Innovate Tech",
-      image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/203ba178-a255-472c-b858-7a949d9cbd50/dc5akgn-c7d5d9f2-6e95-4180-9183-4d33a735073c.jpg/v1/fill/w_900,h_1297,q_75,strp/luna_lovegood1_by_maria_hideki_dc5akgn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI5NyIsInBhdGgiOiJcL2ZcLzIwM2JhMTc4LWEyNTUtNDcyYy1iODU4LTdhOTQ5ZDljYmQ1MFwvZGM1YWtnbi1jN2Q1ZDlmMi02ZTk1LTQxODAtOTE4My00ZDMzYTczNTA3M2MuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.gd157Kq8EEgKt-u_6GripJDJ7Q00qn3MyhWI1mFWeYI",
-    },
-   
-  ];
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
 // Define an array of gradient styles
 const gradients = [
   'linear-gradient(135deg, #f97316, #f59e0b)', // blue to Amber
@@ -89,13 +31,11 @@ const gradients = [
   'linear-gradient(135deg, #dc2626, #f87171)', // Red to Light Red (similar to blue to yellow)
   'linear-gradient(135deg, #4c51bf, #6b46c1)', // Blue to Purple
 ];
-
-
   return (
     <div>
     <Banner />
     {/*Our Digital Services */}
-  <div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
+<div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
       <div className="max-w-lg mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
         <p className="text-gray-600 mt-2 text-sm sm:text-base">
@@ -105,12 +45,12 @@ const gradients = [
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto mt-4 sm:mt-6">
         {services.map((service, index) => (
           <div
-            key={service.id}
-         onClick={() => navigate(`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`)}  // Use navigate function
+            key={index} // Using index as key since service.id is not available
+            onClick={() => navigate(`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`)}
             className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex flex-col justify-between text-left transition-all hover:shadow-xl hover:cursor-pointer sm:hover:translate-y-[-10px] sm:hover:scale-105"
           >
             <div>
-              <div 
+              <div
                 className="flex justify-center items-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl mr-4 mb-2"
                 style={{ background: gradients[index % gradients.length], flexShrink: 0 }}
               >
@@ -120,10 +60,10 @@ const gradients = [
               <p className="mt-2 text-gray-600 text-sm sm:text-base">{service.description}</p>
             </div>
             <Link
-              to={`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`} 
+              to={`/service/${service.path.toLowerCase().replace(/\s+/g, '-')}`}
               className="mt-3 sm:mt-4 inline-block text-blue-500 self-start text-sm sm:text-base"
             >
-              Learn More 
+              Learn More
             </Link>
           </div>
         ))}
@@ -201,16 +141,16 @@ const gradients = [
       </div>
     </div>
 {/*States */}
-   <div className="flex flex-col md:flex-row justify-around items-center bg-blue-500 text-white py-4 md:py-15 px-6 ">
-          <div className="text-center mb-4 md:mb-0">
+   <div className="flex flex-col md:flex-row justify-around items-center bg-blue-500 text-white py-8 md:py-15 px-6 ">
+          <div className="text-center mb-5 md:mb-0">
             <h3 className="text-4xl font-bold">500+</h3>
             <p className="text-sm">Successful Campaigns</p>
           </div>
-          <div className="text-center mb-4 md:mb-0">
+          <div className="text-center mb-5 md:mb-0">
             <h3 className="text-4xl font-bold">98%</h3>
             <p className="text-sm">Client Satisfaction</p>
           </div>
-          <div className="text-center mb-4 md:mb-0">
+          <div className="text-center mb-5 md:mb-0">
             <h3 className="text-4xl font-bold">250M+</h3>
             <p className="text-sm">Impressions Generated</p>
           </div>
