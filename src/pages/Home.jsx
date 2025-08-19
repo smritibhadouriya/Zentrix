@@ -20,8 +20,6 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
 // Define an array of gradient styles
 const gradients = [
   'linear-gradient(135deg, #f97316, #f59e0b)', // blue to Amber
@@ -35,7 +33,7 @@ const gradients = [
     <div>
     <Banner />
     {/*Our Digital Services */}
-<div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50">
+<div className="px-4 py-10 md:px-6 md:py-12 lg:px-38 lg:py-16 bg-gray-50"> 
       <div className="max-w-lg mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Digital Services</h2>
         <p className="text-gray-600 mt-2 text-sm sm:text-base">
@@ -108,8 +106,7 @@ const gradients = [
     </div>
   </div>
 </div>
-
-</div>
+</div> 
 {/*Testimonials */}
   <div className=" px-2 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
