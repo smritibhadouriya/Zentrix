@@ -11,9 +11,10 @@ const Footer = () => {
     e.target.reset();
   };
 
-  const handleUnsubscribe =(e) =>{
-    console.log('unsubscribe')
-  }
+  const handleUnsubscribe = (e) => {
+    console.log('unsubscribe');
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300 px-4 py-10 md:px-6 md:py-12 lg:px-36 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +67,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            
           </div>
 
           {/* Contact Info Section */}
@@ -85,39 +85,40 @@ const Footer = () => {
                 );
               })}
             </ul>
-           
           </div>
 
           {/* Subscribe Section */}
-<div>
-  <h3 className="text-white text-lg font-semibold mb-6">Subscribe</h3>
-<div className="flex mb-2 w-full max-w-md mx-auto md:max-w-lg">
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    className="flex-1 px-3 py-2 sm:px-4 sm:py-2.5 bg-gray-800 text-gray-300 border-l border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-    required
-  />
-  <button
-    onClick={handleSubscribe}
-    className="px-3 py-2 sm:px-4 sm:py-2.5 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition-colors text-sm sm:text-base"
-  >
-    Subscribe
-  </button>
-</div>
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-6">Subscribe</h3>
+            <div className="flex mb-2 w-full max-w-[90%] sm:max-w-xs md:max-w-sm mx-auto">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="flex-1 px-2 py-1.5 sm:px-3 sm:py-2 bg-gray-800 text-gray-300 border-l border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs sm:text-sm"
+                required
+              />
+              <button
+                onClick={handleSubscribe}
+                className="px-2 py-1.5 sm:px-3 sm:py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition-colors text-xs sm:text-sm"
+              >
+                Subscribe
+              </button>
+            </div>
 
-  {/* Unsubscribe Link */}
-  <div className="text-sm text-gray-400 ">
-    Click Here to 
-    <a
-      href="#"
-      onClick={handleUnsubscribe}
-      className="text-white/80 hover:text-gray-300 transition-colors"> Unsubscribe
-    </a>
-  </div>
-</div>
-
+            {/* Unsubscribe Link */}
+            <div className="text-sm text-gray-400 mt-2 text-center">
+              Click Here to
+              <a
+                href="#"
+                onClick={handleUnsubscribe}
+                className="text-white/80 hover:text-gray-300 transition-colors"
+              >
+                {' '}
+                Unsubscribe
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Footer Bottom */}
