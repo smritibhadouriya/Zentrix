@@ -91,21 +91,21 @@ const Footer = () => {
           {/* Subscribe Section */}
 <div>
   <h3 className="text-white text-lg font-semibold mb-6">Subscribe</h3>
-  <div className="flex mb-1 mr-4 md:mr-0">
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter your email"
-      className="flex-1 px-4 py-2 bg-gray-800  text-gray-300 border-l border-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"
-      required
-    />
-    <button
-      onClick={handleSubscribe}
-      className="px-4 py-2 bg-blue-500 text-white rounded-r hover:bg-blue-600 transition-colors"
-    >
-      Subscribe
-    </button>
-  </div>
+<div className="flex mb-2 w-full max-w-md mx-auto md:max-w-lg">
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    className="flex-1 px-3 py-2 sm:px-4 sm:py-2.5 bg-gray-800 text-gray-300 border-l border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+    required
+  />
+  <button
+    onClick={handleSubscribe}
+    className="px-3 py-2 sm:px-4 sm:py-2.5 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition-colors text-sm sm:text-base"
+  >
+    Subscribe
+  </button>
+</div>
 
   {/* Unsubscribe Link */}
   <div className="text-sm text-gray-400 ">
