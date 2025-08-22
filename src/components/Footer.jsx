@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaMailBulk } from 'react-icons/fa';
-import { FaLocationDot } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { footerData } from '../Data/FooterData'; // Ensure the path and file name are correct
 
@@ -128,9 +126,9 @@ const Footer = () => {
           </div>
           <div className="md:text-right md:order-2 md:flex space-x-4">
             {footerData.footerLinks.map((link, index) => (
-              <a key={index} href={link.href} className="hover:text-blue-500 text-lg">
-                {link.label}
-              </a>
+                <Link to={link.to}  className="hover:text-blue-500 text-lg">
+                    {link.label}
+                  </Link>
             ))}
           </div>
         </div>

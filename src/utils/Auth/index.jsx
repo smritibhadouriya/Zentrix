@@ -8,7 +8,10 @@ const About = lazy(() => import('../../pages/About'))
 const Service = lazy(() => import('../../pages/Service'))
 const Loading = lazy(() => import('../../components/Loading'))
 const NotFound = lazy(() => import('../../components/NotFound'))
+const Privacy = lazy(() => import('../../components/Privacy'))
+const Terms = lazy(() => import('../../components/Terms'))
 import SubscribePopup from "../../components/SubscribePopup"
+
 const Auth = () => {
    const [showSubscribe, setShowSubscribe] = useState(false);
 useEffect(() => {
@@ -37,6 +40,8 @@ useEffect(() => {
             <Route path="/contact" element={<Contact />} />
              <Route path="/about" element={<About />} />
               <Route path="/service/:service" element={<Service />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/termsnservice" element={<Terms />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

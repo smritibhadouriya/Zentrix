@@ -30,8 +30,8 @@ export const footerData = {
     { icon: FaMailBulk, text: 'hello@Zentrix.com' },
   ],
   footerLinks: [
-    { href: '#', label: 'Terms of Service' },
-    { href: '#', label: 'Privacy Policy' },
-    { href: '#', label: 'Cookie Policy' },
+
+    { to: '/termsnservice', label: 'Terms of Service' },
+    { to: '/privacy', label: 'Privacy Policy' }
   ],
 };
