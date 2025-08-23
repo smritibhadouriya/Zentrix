@@ -21,8 +21,8 @@ export const footerData = {
     { to: '/service/performance-marketing', label: 'Performance Marketing' },
   ],
   companyLinks: [
-    { href: '/about', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
+    { to :'/about', label: 'About Us' },
+    { to: '/contact', label: 'Contact' },
   ],
   contactInfo: [
     { icon: FaLocationDot , text: '123 Business Avenue, New York, NY 10001' },

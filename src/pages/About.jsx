@@ -13,7 +13,7 @@ const About = () => {
     <div>
       <header className="text-center py-10 lg:py-16 px-4 md:px-6 bg-opacity-10 bg-blue-50 w-full pt-35 lg:pt-20">
         <h1 className="text-5xl font-bold text-gray-800">
-          About <span className="text-blue-500">DigitalPro</span>
+          About <span className="text-blue-500">Zentrix</span>
         </h1>
         <p className="text-gray-600 mt-2 text-md max-w-2xl mx-auto">
           We're a team of passionate digital marketing experts dedicated to helping businesses thrive in the digital landscape through innovative strategies and proven results.
@@ -23,7 +23,7 @@ const About = () => {
           <div className="w-full md:w-1/2 p-6 text-left">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Story</h2>
             <p className="mb-4 text-md text-gray-600">
-              Founded in 2018, DigitalPro emerged from a simple belief: every business deserves access to world-class digital marketing expertise. What started as a small team of passionate marketers has grown into a full-service digital agency.
+              Founded in 2018, Zentrix emerged from a simple belief: every business deserves access to world-class digital marketing expertise. What started as a small team of passionate marketers has grown into a full-service digital agency.
             </p>
             <p className="mb-4 text-md text-gray-600">
               Today, we've helped over 500 businesses transform their digital presence, generating millions in additional revenue and building lasting relationships with their customers.

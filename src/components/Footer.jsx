@@ -59,9 +59,9 @@ const Footer = () => {
             <ul className="text-sm space-y-2">
               {footerData.companyLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-blue-500">
+                  <Link to={link.to} className="hover:text-blue-500">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
